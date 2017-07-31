@@ -7,6 +7,9 @@
 # pyenv version file
 .python-version
 
+# exclude env
+env
+
 # Python
 *.py[co]
 
