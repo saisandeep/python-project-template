@@ -2,11 +2,11 @@ from enum import Enum
 
 
 class MasterStates(Enum):
-    INITIAL = 'initial'
-    WRITE_CHANGE_TO_VARIABLE = 'write_change_to_variable'
-    PROCESS_COMMIT_OR_ABORT = 'process_commit_or_abort'
-    LEADER_ELECTION = 'leader_election'
-    GET_SYNC_WITH_MASTER_DB_IF_CHOOSEN_AS_MASTER = \
-        'get_sync_with_master_db_if_choosen_as_master'
-    SUCCESS = 'success'
+    INITIAL = 'initial',
+    SEND_MESSAGES_TO_SLAVES = 'send_messages_to_slaves',
+    WAIT_AND_AGGREGATE_VOTES = 'wait_and_aggregate_votes',
+    PREPARE_COMMIT_OR_ABORT_MESSAGES = 'prepare_commit_or_abort_message',
+    SEND_COMMIT_OR_ABORT_MESSAGES = 'send_commit_or_abort_message',
+    SUCCESS = 'success',
     ERROR = 'error'
+    SEND_RESPONSE = 'send_response'

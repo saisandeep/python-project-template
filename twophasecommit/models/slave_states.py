@@ -2,10 +2,10 @@ from enum import Enum
 
 
 class SlaveStates(Enum):
-    INITIAL = 'initial',
-    SEND_MESSAGES_TO_SLAVES = 'send_messages_to_slaves',
-    WAIT_AND_AGGREGATE_VOTES = 'wait_and_aggregate_votes',
-    PREPARE_COMMIT_OR_ABORT_MESSAGES = 'prepare_commit_or_abort_message',
-    SEND_COMMIT_OR_ABORT_MESSAGES = 'send_commit_or_abort_message',
-    SUCCESS = 'success',
+    INITIAL = 'initial'
+    WRITE_CHANGE_TO_VARIABLE = 'write_change_to_variable'
+    SEND_VOTE = 'send_vote'
+    PROCESS_COMMIT_OR_ABORT = 'process_commit_or_abort'
+    SUCCESS = 'success'
     ERROR = 'error'
+    SEND_RESPONSE = 'send_response'
